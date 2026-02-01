@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Houssam Salek — Portfolio</title>
+  <meta name="description" content="Portfolio of Houssam Salek — EMSI student, developer." />
+  <link rel="stylesheet" href="styl.css" />
+</head>
+
+<body>
+  <div id="mouse-glow"></div>
+
+  <header class="header">
+    <a class="logo" href="#top" aria-label="Go to top" data-tooltip="Go to top">
+      <span class="logo-dot"></span> HS
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#about" data-tooltip="About">About</a>
+      <a href="#skills" data-tooltip="Skills">Skills</a>
+      <a href="#projects" data-tooltip="Projects">Projects</a>
+      <a href="#experience" data-tooltip="Experience">Experience</a>
+      <a href="#contact" data-tooltip="Contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme" data-tooltip="Toggle theme">
+        🌙
+      </button>
+      <a class="btn" href="#contact" data-tooltip="Contact me">Hire / Contact</a>
+    </div>
+  </header>
+
+  <main id="top" class="main">
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="hero-left">
+        <p class="tag">EMSI • Software Student • Developer</p>
+        <h1 >
+          Hi, I'm <span class="accent">Houssam Salek</span> 👋
+        </h1>
+        <p class="sub">
+          I build clean, practical projects: web apps, C programming, and student systems.
+          <span class="muted">(Replace this later with your real summary.)</span>
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="#projects" data-tooltip="See Projects">See Projects</a>
+          <a class="btn ghost" href="#about" data-tooltip="About Me">About Me</a>
+        </div>
+
+        <div class="meta">
+          <div class="chip">📍 Morocco</div>
+          <div class="chip">💻 C • HTML/CSS/JS</div>
+          <div class="chip">🧠 Analytical • Teamwork</div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-card">
+          <div class="avatar" aria-hidden="true">HS</div>
+          <div>
+            <h3 class="profile-name">Houssam Salek</h3>
+            <p class="muted">3rd year EMSI • Junior Developer</p>
+          </div>
+
+          <div class="profile-links">
+            <a class="link" href="#" id="githubLink" target="_blank" rel="noreferrer" data-tooltip="GitHub">GitHub</a>
+            <a class="link" href="#" id="linkedinLink" target="_blank" rel="noreferrer" data-tooltip="LinkedIn">LinkedIn</a>
+            <a class="link" href="#" id="cvLink" target="_blank" rel="noreferrer" data-tooltip="Download CV">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section velocity-skew">
+      <div class="section-head line-draw">
+        <h2>About</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="card blur-section">
+          <h3>Who I am</h3>
+          <p>
+            Hi! I'm Houssam Salek, a 3rd-year IIR engineering student at EMSI.
+            I'm currently looking for a PFA internship starting 01/07.
+
+            I enjoy building web applications with PHP and MySQL, working on Linux,
+            and learning new technologies through hands-on projects.
+            I like understanding how things work and improving my skills by
+            building real, useful solutions.
+          </p>
+          <ul class="list">
+            <li>✅ Strong analytical mindset</li>
+            <li>✅ Teamwork & communication</li>
+            <li>✅ Comfortable in C and web basics</li>
+          </ul>
+        </div>
+
+        <div class="card blur-section">
+          <h3>What I'm looking for</h3>
+          <p>
+            Internship / freelance / junior opportunities where I can build, learn, and contribute.
+            <span class="muted">(Change this to your goal.)</span>
+          </p>
+          <div class="mini-grid">
+            <div class="mini">
+              <div class="mini-title">Email</div>
+              <div class="muted">your.email@example.com</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Phone</div>
+              <div class="muted">+212 ...</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Languages</div>
+              <div class="muted">French • English (intermediate)</div>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Education</div>
+              <div class="muted">Bac Science 2022</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section-head line-draw">
+        <h2>Skills</h2>
+        <p class="muted">Simple skill blocks (edit later).</p>
+      </div>
+
+      <div class="skills">
+        <div class="skill card tilt-card">
+          <div class="tilt-card-inner">
+            <h3>Programming</h3>
+            <div class="pills">
+              <span class="pill">C</span>
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill muted-pill">PHP (optional)</span>
+            </div>
+            <p class="muted small">Add more: Python / SQL / Java…</p>
+          </div>
+        </div>
+
+        <div class="skill card tilt-card">
+          <div class="tilt-card-inner">
+            <h3>Tools</h3>
+            <div class="pills">
+              <span class="pill">Git</span>
+              <span class="pill">Linux</span>
+              <span class="pill">VS Code</span>
+            </div>
+            <p class="muted small">Add: Docker, Figma, etc.</p>
+          </div>
+        </div>
+
+        <div class="skill card tilt-card">
+          <div class="tilt-card-inner">
+            <h3>Soft Skills</h3>
+            <div class="pills">
+              <span class="pill">Teamwork</span>
+              <span class="pill">Sales experience</span>
+              <span class="pill">Problem solving</span>
+            </div>
+            <p class="muted small">Replace "Sales experience" with your real roles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section velocity-skew">
+      <div class="section-head line-draw">
+        <h2>Projects</h2>
+        <p class="muted">Cards are generated from <b>script.js</b>. You'll just edit the data.</p>
+      </div>
+
+      <div id="projectsGrid" class="projects"></div>
+    </section>
+
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-head line-draw">
+        <h2>Experience</h2>
+        <p class="muted">Timeline style. You'll replace items later.</p>
+      </div>
+
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section velocity-skew">
+      <div class="section-head line-draw">
+        <h2>Contact</h2>
+        <p class="muted">This form is front-end only (no backend). It can open email automatically.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card blur-section">
+          <h3>Let's talk</h3>
+          <p class="muted">
+            Tell me what you need and I'll respond. Replace email & socials later.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a class="link" href="mailto:your.email@example.com" id="emailLink" data-tooltip="your.email@example.com">your.email@example.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a class="link" href="#" id="githubLink2" target="_blank" rel="noreferrer" data-tooltip="github.com/yourname">github.com/yourname</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <a class="link" href="#" id="linkedinLink2" target="_blank" rel="noreferrer" data-tooltip="linkedin.com/in/yourname">linkedin.com/in/yourname</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="card form blur-section" id="contactForm">
+          <label>
+            Name
+            <input required name="name" placeholder="Your name" />
+          </label>
+
+          <label>
+            Email
+            <input required type="email" name="email" placeholder="your@email.com" />
+          </label>
+
+          <label>
+            Message
+            <textarea required name="message" rows="5" placeholder="Write your message..."></textarea>
+          </label>
+
+          <button class="btn" type="submit" data-tooltip="Send message">Send</button>
+          <p class="muted small" id="formHint"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="muted small">
+        © <span id="year"></span> Houssam Salek — Built with HTML/CSS/JS.
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
