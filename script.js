@@ -33,8 +33,8 @@ const PROJECTS = [
     title: "LahekLibrary — Web Library Management System",
     description:
       "PHP/MySQL web application with authentication, role-based access, admin dashboard, media catalog, wishlist system, and secure CRUD operations using PDO.",
-    tags: ["PHP", "MySQL", "PDO", "HTML", "CSS", "Linux"],
-    image: "Screenshot 2026-01-03 155131.png",
+    tags: ["PHP", "MySQL", "PDO", "HTML", "CSS"],
+    image: "php.png",
     speed: 0.28,
     live: "#",
     code: "#"
@@ -44,7 +44,7 @@ const PROJECTS = [
     description:
       "C++ console application showcasing advanced OOP concepts, multi-role authentication, subscription management, borrowing logic, smart pointers, and persistent storage.",
     tags: ["C++", "OOP", "STL", "Smart Pointers", "File I/O"],
-    image: "Screenshot 2025-12-31 111617.png",
+    image: "c++.png",
     speed: 0.18,
     live: "#",
     code: "#"
@@ -54,7 +54,7 @@ const PROJECTS = [
     description:
       "Modular Bash-based Linux audit tool packaged as a Debian .deb, including system reports, file search, process monitoring, and user/permission management.",
     tags: ["Linux", "Bash", "Debian", "System Administration"],
-    image: "Logo-pinguino-de-Linux.jpg",
+    image: "Linux.jpg",
     speed: 0.36,
     live: "#",
     code: "#"
@@ -592,4 +592,5 @@ initMouseGlow();
 document.addEventListener('DOMContentLoaded', () => {
   new ScrollEffects();
   initDecryptTooltip();
+
 });
