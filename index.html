@@ -13,28 +13,47 @@
 <body>
   <div id="mouse-glow"></div>
 
-  <header class="header">
-    <a class="logo" href="#top" aria-label="Go to top" data-tooltip="Go to top">
-      <span class="logo-dot"></span> HS
-    </a>
+ <header class="header">
+  <!-- Logo -->
+  <a class="logo" href="#top" aria-label="Go to top" data-tooltip="Go to top">
+    <span class="logo-dot"></span> HS
+  </a>
 
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about" data-tooltip="About">About</a>
-      <a href="#skills" data-tooltip="Skills">Skills</a>
-      <a href="#projects" data-tooltip="Projects">Projects</a>
-      <a href="#experience" data-tooltip="Experience">Experience</a>
-      <a href="#journey" data-tooltip="Journey">Journey</a>
-      <a href="#certificates" data-tooltip="Certificates">Certificates</a>
-      <a href="#contact" data-tooltip="Contact">Contact</a>
-    </nav>
+  <!-- Desktop nav -->
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#journey">Journey</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <div class="header-actions">
-      <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme" data-tooltip="Toggle theme">
-        🌙
-      </button>
-      <a class="btn" href="#contact" data-tooltip="Contact me">Hire / Contact</a>
-    </div>
-  </header>
+  <!-- Actions -->
+  <div class="header-actions">
+    <button class="btn ghost" id="themeBtn" type="button" aria-label="Toggle theme">
+      🌙
+    </button>
+
+    <!-- Burger button (mobile only) -->
+    <button class="btn ghost menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#journey">Journey</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
 
   <main id="top" class="main">
     <!-- HERO -->
