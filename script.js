@@ -779,10 +779,59 @@ function initDecryptTooltip() {
 }
 
 // =========================
+// Mobile Menu
+// =========================
+function initMobileMenu() {
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (!menuBtn || !mobileMenu) return;
+
+  const toggleMenu = (e) => {
+    if (e) e.stopPropagation();
+    const isOpen = mobileMenu.classList.toggle("open");
+    menuBtn.textContent = isOpen ? "✕" : "☰";
+    mobileMenu.setAttribute("aria-hidden", isOpen ? "false" : "true");
+  };
+
+  menuBtn.addEventListener("click", toggleMenu);
+
+  // Close when clicking links
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      menuBtn.textContent = "☰";
+      mobileMenu.setAttribute("aria-hidden", "true");
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (mobileMenu.classList.contains("open")) {
+      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.remove("open");
+        menuBtn.textContent = "☰";
+        mobileMenu.setAttribute("aria-hidden", "true");
+      }
+    }
+  });
+
+  // Close on escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileMenu.classList.contains("open")) {
+      mobileMenu.classList.remove("open");
+      menuBtn.textContent = "☰";
+      mobileMenu.setAttribute("aria-hidden", "true");
+    }
+  });
+}
+
+// =========================
 // Initialize Everything
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   setLinks();
   renderProjects();
@@ -792,6 +841,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initForm();
   initMouseGlow();
+  initMobileMenu();
 
   new ScrollEffects();
   initDecryptTooltip();
