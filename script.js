@@ -9,7 +9,7 @@ const PROFILE = {
   email: "houssamsalek0707@gmail.com",
   github: "https://github.com/dororo911",
   linkedin: "https://www.linkedin.com/in/houssam-salek",
-  cv: "Profile.pdf",
+  cv: "cv.pdf",
   summary:
     "3rd-year IIR engineering student at EMSI, seeking a PFA internship starting July 2026. Focused on PHP/MySQL web development, Linux/Bash scripting, and AI assistant design."
 };
@@ -22,10 +22,67 @@ const EXPERIENCE = [
       "Currently looking for a PFA internship starting July 2026 in backend development, web systems, Linux environments, and automation."
   },
   {
-    date: "2022 — Present",
+    date: "2023 — Present",
     title: "IIR Engineering Student — EMSI",
     details:
       "3rd-year engineering student focused on software engineering, web development, system programming, and practical academic projects."
+  }
+];
+
+// =========================
+// Timeline Data
+// =========================
+const TIMELINE_DATA = [
+  {
+    date: "2022",
+    title: "Baccalauréat scientifique",
+    description: "Obtained the scientific baccalaureate diploma, building a strong foundation in mathematics and physics.",
+    type: "education"
+  },
+  {
+    date: "09/2023",
+    title: "Started EMSI (IIR Engineering)",
+    description: "Began IIR engineering studies at EMSI, focusing on software development, networking, and IT systems.",
+    type: "education"
+  },
+  {
+    date: "2024",
+    title: "Academic & Personal Projects",
+    description: "Worked on multiple projects involving C programming, web development (PHP/MySQL, HTML/CSS/JS), and Linux system administration.",
+    type: "project"
+  },
+  {
+    date: "2025",
+    title: "PFA Internship Search",
+    description: "Actively seeking a PFA internship starting 01/07, focused on backend development, web systems, and automation.",
+    type: "experience"
+  }
+];
+
+// =========================
+// Certificates Data
+// =========================
+const CERTIFICATES = [
+  {
+    title: "Certificate in C++ Programming",
+    issuer: "Online Course",
+    year: "2025",
+    image: "cc++.png",
+    pdf: "Coursera C++-POO.pdf"
+  },
+  {
+    title: "Web Development (HTML/CSS/JS)",
+    issuer: "Online Course",
+    year: "2025",
+    image: "js.png",
+    pdf: "Coursera js.pdf"
+  },
+  {
+    title: "Linux Fundamentals",
+    issuer: "Online Course",
+    year: "2025",
+    image: "unix.png",
+    pdf: "Coursera unix.pdf"
   }
 ];
 
@@ -35,8 +92,8 @@ const PROJECTS = [
     description:
       "PHP/MySQL web application with authentication, role-based access, admin dashboard, media catalog, wishlist system, and secure CRUD operations using PDO.",
     tags: ["PHP", "MySQL", "PDO", "HTML", "CSS", "Linux"],
-    image: "Screenshot 2026-01-03 155131.png",
-    speed: 0.28,
+    image: "php.png",
+    speed: 0.30,
     live: "#",
     code: "#"
   },
@@ -45,8 +102,8 @@ const PROJECTS = [
     description:
       "C++ console application showcasing advanced OOP concepts, multi-role authentication, subscription management, borrowing logic, and persistent storage.",
     tags: ["C++", "OOP", "STL", "File I/O"],
-    image: "Screenshot 2025-12-31 111617.png",
-    speed: 0.18,
+    image: "c++.png",
+    speed: 0.20,
     live: "#",
     code: "#"
   },
@@ -55,8 +112,8 @@ const PROJECTS = [
     description:
       "Modular Bash-based Linux audit tool packaged as a Debian .deb, including system reports, process monitoring, and user/permission management.",
     tags: ["Linux", "Bash", "Debian", "System Administration"],
-    image: "Logo-pinguino-de-Linux.jpg",
-    speed: 0.36,
+    image: "Linux.jpg",
+    speed: 0.40,
     live: "#",
     code: "#"
   }
@@ -125,7 +182,7 @@ function renderProjects() {
 }
 
 // =========================
-// Render Timeline
+// Render Timeline (old experience)
 // =========================
 function renderTimeline() {
   const timeline = document.getElementById("timeline");
@@ -145,6 +202,95 @@ function renderTimeline() {
 
     row.appendChild(content);
     timeline.appendChild(row);
+  });
+}
+
+// =========================
+// Type Icons Map
+// =========================
+const TYPE_ICONS = {
+  education: "🎓",
+  project: "💻",
+  certificate: "📜",
+  experience: "💼"
+};
+
+// =========================
+// Render Vertical Timeline
+// =========================
+function renderVerticalTimeline() {
+  const container = document.getElementById("verticalTimeline");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  TIMELINE_DATA.forEach((item, i) => {
+    const side = i % 2 === 0 ? "left" : "right";
+
+    const wrapper = el("div", `vt-item vt-${side} reveal-scale`);
+    wrapper.classList.add(`stagger-${(i % 5) + 1}`);
+
+    // Dot on the line
+    const dot = el("div", `vt-dot vt-dot--${item.type || "default"}`);
+    dot.innerHTML = TYPE_ICONS[item.type] || "●";
+    wrapper.appendChild(dot);
+
+    // Card
+    const card = el("div", "vt-card");
+
+    const badge = el("span", `vt-type vt-type--${item.type || "default"}`, item.type || "");
+    card.appendChild(badge);
+
+    card.appendChild(el("div", "vt-date", item.date));
+    card.appendChild(el("h3", "vt-title", item.title));
+    card.appendChild(el("p", "vt-desc", item.description));
+
+    wrapper.appendChild(card);
+    container.appendChild(wrapper);
+  });
+}
+
+// =========================
+// Render Certificates
+// =========================
+function renderCertificates() {
+  const grid = document.getElementById("certificatesGrid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+
+  CERTIFICATES.forEach((cert, i) => {
+    const card = el("div", "cert-card card reveal-scale");
+    card.classList.add(`stagger-${(i % 5) + 1}`);
+
+    // Preview image or placeholder
+    const preview = el("div", "cert-preview");
+    if (cert.image) {
+      const img = document.createElement("img");
+      img.src = cert.image;
+      img.alt = cert.title;
+      img.loading = "lazy";
+      preview.appendChild(img);
+    } else {
+      preview.innerHTML = `<div class="cert-placeholder">📜</div>`;
+    }
+    card.appendChild(preview);
+
+    const body = el("div", "cert-body");
+    body.appendChild(el("h3", "cert-title", cert.title));
+    body.appendChild(el("p", "cert-issuer muted", cert.issuer));
+    body.appendChild(el("span", "cert-year", cert.year));
+
+    if (cert.pdf) {
+      const dl = el("a", "btn ghost cert-dl", "⬇ Download PDF");
+      dl.href = cert.pdf;
+      dl.target = "_blank";
+      dl.rel = "noreferrer";
+      body.appendChild(dl);
+    }
+
+    card.appendChild(body);
+    grid.appendChild(card);
   });
 }
 
@@ -565,7 +711,7 @@ function initDecryptTooltip() {
   tooltip.className = "decrypt-tooltip";
   document.body.appendChild(tooltip);
 
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+  const chars = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
 
   document.querySelectorAll("[data-tooltip]").forEach((el) => {
     const originalText = el.getAttribute("data-tooltip");
@@ -594,8 +740,8 @@ function initDecryptTooltip() {
           clearInterval(interval);
         }
 
-        iteration += 1 / 3;
-      }, 30);
+        iteration += 1 / 2;
+      }, 20);
     });
 
     el.addEventListener("mouseleave", () => {
@@ -619,6 +765,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setLinks();
   renderProjects();
   renderTimeline();
+  renderVerticalTimeline();
+  renderCertificates();
   initTheme();
   initForm();
   initMouseGlow();
