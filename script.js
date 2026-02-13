@@ -38,28 +38,40 @@ const EXPERIENCE = [
 // =========================
 const TIMELINE_DATA = [
   {
+  date: "2005",
+  title: "Born",
+  description: "Born in 2005 (Houssam Salek).",
+  type: "personal",
+  image: "houssam.jpg"
+},
+
+  {
     date: "2022",
     title: "Baccalauréat scientifique",
     description: "Obtained the scientific baccalaureate diploma, building a strong foundation in mathematics and physics.",
-    type: "education"
+    type: "education",
+    image: "images.jpg"
   },
   {
     date: "09/2023",
     title: "Started EMSI (IIR Engineering)",
     description: "Began IIR engineering studies at EMSI, focusing on software development, networking, and IT systems.",
-    type: "education"
+    type: "education",
+    image: "journey-2023.jpg"
   },
   {
     date: "2024",
     title: "Academic & Personal Projects",
     description: "Worked on multiple projects involving C programming, web development (PHP/MySQL, HTML/CSS/JS), and Linux system administration.",
-    type: "project"
+    type: "project",
+    image: "journey-2024.jpg"
   },
   {
     date: "2025",
     title: "PFA Internship Search",
     description: "Actively seeking a PFA internship starting 01/07, focused on backend development, web systems, and automation.",
-    type: "experience"
+    type: "experience",
+    image: "journey-2025.jpg"
   }
 ];
 
@@ -213,6 +225,7 @@ function renderTimeline() {
 // Type Icons Map
 // =========================
 const TYPE_ICONS = {
+  personal: "🎂",
   education: "🎓",
   project: "💻",
   certificate: "📜",
@@ -248,6 +261,16 @@ function renderVerticalTimeline() {
     card.appendChild(el("div", "vt-date", item.date));
     card.appendChild(el("h3", "vt-title", item.title));
     card.appendChild(el("p", "vt-desc", item.description));
+
+    if (item.image) {
+      const hoverWrap = el("div", "vt-hover-photo");
+      const img = document.createElement("img");
+      img.src = item.image;
+      img.alt = `${item.title} preview`;
+      img.loading = "lazy";
+      hoverWrap.appendChild(img);
+      card.appendChild(hoverWrap);
+    }
 
     wrapper.appendChild(card);
     container.appendChild(wrapper);
@@ -827,6 +850,75 @@ function initMobileMenu() {
 }
 
 // =========================
+// Bottom Bar (Scroll + Active Section)
+// =========================
+function initBottomBar() {
+  const bar = document.getElementById("bottomBar");
+  if (!bar) return;
+
+  const links = Array.from(bar.querySelectorAll("a[href^='#']"));
+  const sections = links
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+
+  let activeId = "";
+
+  const setActive = (id) => {
+    if (!id || id === activeId) return;
+    activeId = id;
+    links.forEach((link) => {
+      const href = link.getAttribute("href");
+      link.classList.toggle("active", href === `#${id}`);
+    });
+  };
+
+  const visibilityMap = new Map();
+
+  const updateActiveFromVisible = () => {
+    const visible = sections.filter((section) => visibilityMap.get(section.id));
+    if (!visible.length) return;
+
+    const targetLine = window.innerHeight * 0.35;
+    visible.sort((a, b) => {
+      const aDist = Math.abs(a.getBoundingClientRect().top - targetLine);
+      const bDist = Math.abs(b.getBoundingClientRect().top - targetLine);
+      return aDist - bDist;
+    });
+
+    setActive(visible[0].id);
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        visibilityMap.set(entry.target.id, entry.isIntersecting);
+      });
+      updateActiveFromVisible();
+    },
+    {
+      threshold: [0.15, 0.35, 0.6],
+      rootMargin: "-10% 0px -45% 0px"
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  const updateVisibility = () => {
+    bar.classList.toggle("show", window.scrollY > 50);
+  };
+
+  updateVisibility();
+  window.addEventListener(
+    "scroll",
+    () => {
+      updateVisibility();
+      updateActiveFromVisible();
+    },
+    { passive: true }
+  );
+}
+
+// =========================
 // Initialize Everything
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
@@ -842,6 +934,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initForm();
   initMouseGlow();
   initMobileMenu();
+  initBottomBar();
 
   new ScrollEffects();
   initDecryptTooltip();
