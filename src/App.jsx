@@ -1,3 +1,4 @@
+import images from '../img/images.jpg';
 import { useEffect, useMemo, useState } from "react";
 import { Timeline } from "./components/ui/timeline";
 import {
@@ -42,7 +43,7 @@ const TIMELINE_DATA = [
     description:
       "Obtained the scientific baccalaureate diploma, building a strong foundation in mathematics and physics.",
     type: "education",
-    image: "/img/images.jpg"
+    image: "images"
   },
   {
     date: "09/2023",
