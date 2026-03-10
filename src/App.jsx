@@ -43,7 +43,7 @@ const TIMELINE_DATA = [
     description:
       "Obtained the scientific baccalaureate diploma, building a strong foundation in mathematics and physics.",
     type: "education",
-    image: "./public/img/images.jpg"
+    image: "/img/images.jpg"
   },
   {
     date: "09/2023",
