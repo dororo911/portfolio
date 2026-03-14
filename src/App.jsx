@@ -583,18 +583,9 @@ export default function App() {
 
           <div className="projects">
             {PROJECTS.map((p, i) => (
-              <div key={p.title} className={`card project-card reveal-scale stagger-${(i % 5) + 1}`}>
+              <div key={p.title} className={`project-card reveal-scale stagger-${(i % 5) + 1}`}>
                 <div className="project-visual parallax-layer" data-speed={p.speed}>
                   <img src={p.image} alt={p.title} />
-                </div>
-                <h3>{p.title}</h3>
-                <p>{p.description}</p>
-                <div className="project-meta">
-                  {p.tags.map((tag) => (
-                    <span className="badge" key={tag}>
-                      {tag}
-                    </span>
-                  ))}
                 </div>
               </div>
             ))}
