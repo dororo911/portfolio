@@ -103,17 +103,17 @@ const SKILL_GROUPS = [
   {
     title: "Frontend",
     description: "Building accessible and responsive user interfaces.",
-    items: ["React", "JavaScript", "HTML", "CSS", "Tailwind"]
+    items: ["React", "JavaScript", "HTML", "CSS", "TypeScript"]
   },
   {
     title: "Programming",
     description: "Core software development and system workflow skills.",
-    items: ["C", "Git", "Linux"]
+    items: ["C", "C++", "Java", "Python", "PHP"]
   },
   {
     title: "Tools",
     description: "Daily tools used to build, test, and ship projects.",
-    items: ["VS Code", "GitHub", "Vite"]
+    items: ["VS Code", "Git", "GitHub", "Vite", "Linux"]
   }
 ];
 
