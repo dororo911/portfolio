@@ -93,8 +93,8 @@ const PROJECTS = [
       "Modular Bash-based Linux audit tool packaged as a Debian .deb, including system reports, process monitoring, and user/permission management.",
     technologies: ["Linux", "Bash", "Debian", "System Administration"],
     github: "https://github.com/dororo911",
-    live: null,
-    image: assetUrl("img/Linux.jpg"),
+    live: "https://houssamsalek.me/Aim/",
+    image: assetUrl("img/aime.png"),
     speed: 0.4
   }
 ];
@@ -586,28 +586,10 @@ export default function App() {
                 </div>
 
                 <div className="project-body">
-                  <h3 className="project-title">{p.title}</h3>
-                  <p className="project-description muted">{p.description}</p>
-
-                  <div className="project-tech">
-                    {p.technologies.map((tech) => (
-                      <span key={`${p.title}-${tech}`} className="badge">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
                   <div className="project-links">
-                    <a className="link" href={p.github} target="_blank" rel="noreferrer">
-                      GitHub Repository
+                    <a className="link" href={p.live || p.github} target="_blank" rel="noreferrer">
+                      {p.live ? "Live Site" : "GitHub Repository"}
                     </a>
-                    {p.live ? (
-                      <a className="link" href={p.live} target="_blank" rel="noreferrer">
-                        Live Demo
-                      </a>
-                    ) : (
-                      <span className="muted small">Live demo not available yet</span>
-                    )}
                   </div>
                 </div>
               </article>
