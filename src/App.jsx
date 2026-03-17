@@ -229,11 +229,14 @@ export default function App() {
 
   useEffect(() => {
     const experienceSection = document.getElementById("experience");
-    if (!experienceSection) return undefined;
+    const skillsSection = document.getElementById("skills");
+    if (!experienceSection || !skillsSection) return undefined;
 
     const updateAnaVisibility = () => {
       const { top } = experienceSection.getBoundingClientRect();
+      const { bottom } = skillsSection.getBoundingClientRect();
       document.body.classList.toggle("experience-active", top <= 120);
+      document.body.classList.toggle("after-skills", bottom <= 120);
     };
 
     updateAnaVisibility();
@@ -242,6 +245,7 @@ export default function App() {
 
     return () => {
       document.body.classList.remove("experience-active");
+      document.body.classList.remove("after-skills");
       window.removeEventListener("scroll", updateAnaVisibility);
       window.removeEventListener("resize", updateAnaVisibility);
     };

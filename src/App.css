@@ -208,6 +208,11 @@ body.experience-active .floating-ana {
   transform: translateY(-28px) scale(0.97);
 }
 
+body.after-skills .floating-ana {
+  opacity: 0;
+  transform: translateY(-40px) scale(0.95);
+}
+
 .floating-hs {
   content: "";
   position: fixed;
