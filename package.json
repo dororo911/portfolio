@@ -3,13 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://houssamsalek.me/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --cname houssamslk.dev"
   },
   "dependencies": {
     "framer-motion": "^12.35.2",
