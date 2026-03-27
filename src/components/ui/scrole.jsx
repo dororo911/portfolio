@@ -15,10 +15,16 @@ export function useTimelineScroll(containerRef, height) {
 
 export function useRevealOnScroll() {
   useEffect(() => {
+    const lineTimers = new WeakMap();
+
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("active");
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          } else {
+            entry.target.classList.remove("active");
+          }
         });
       },
       { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
@@ -27,7 +33,11 @@ export function useRevealOnScroll() {
     const blurObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("in-view");
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          } else {
+            entry.target.classList.remove("in-view");
+          }
         });
       },
       { threshold: 0.3 }
@@ -37,7 +47,15 @@ export function useRevealOnScroll() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add("drawn"), 200);
+            const timer = setTimeout(() => entry.target.classList.add("drawn"), 200);
+            lineTimers.set(entry.target, timer);
+          } else {
+            const timer = lineTimers.get(entry.target);
+            if (timer) {
+              clearTimeout(timer);
+              lineTimers.delete(entry.target);
+            }
+            entry.target.classList.remove("drawn");
           }
         });
       },
@@ -49,6 +67,9 @@ export function useRevealOnScroll() {
     document.querySelectorAll(".line-draw").forEach((el) => lineObserver.observe(el));
 
     return () => {
+      document.querySelectorAll(".reveal-scale").forEach((el) => el.classList.remove("active"));
+      document.querySelectorAll(".blur-section").forEach((el) => el.classList.remove("in-view"));
+      document.querySelectorAll(".line-draw").forEach((el) => el.classList.remove("drawn"));
       revealObserver.disconnect();
       blurObserver.disconnect();
       lineObserver.disconnect();
