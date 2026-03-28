@@ -117,7 +117,7 @@ export const SKILL_GROUPS = [
   {
     title: "Frontend",
     description: "Building responsive, accessible interfaces.",
-    items: ["React", "JavaScript", "TypeScript", "HTML", "CSS"]
+    items: ["React", "TypeScript", "CSS"]
   },
   {
     title: "Languages",
