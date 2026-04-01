@@ -1,12 +1,12 @@
 
 :root{
   --bg: #09131f;
-  --panel: #101d2d;
+  --panel: #000000;
   --text: #e7f0fb;
   --muted: #9db1c8;
-  --line: rgba(255,255,255,.10);
-  --accent: #21b4a8;
-  --accent-2: #f29a4a;
+  --line: rgba(96, 14, 179, 0.15);
+  --accent: #BF80FF;
+  --accent-2: #A78BFA;
   --shadow: 0 16px 50px rgba(0,0,0,.35);
   --radius: 18px;
   --max: 80%;
@@ -22,9 +22,9 @@
   --panel: #edf2f7;
   --text: #0f1b2d;
   --muted: #445a74;
-  --line: rgba(17,24,39,.12);
-  --accent: #0e9f95;
-  --accent-2: #de7e2f;
+  --line: rgba(191, 128, 255, 0.12);
+  --accent: #9F5FE8;
+  --accent-2: #A78BFA;
   --shadow: 0 16px 50px rgba(17,24,39,.10);
   --tooltip-bg: rgba(255,255,255,0.95);
   --text-secondary: #111827;
@@ -49,9 +49,9 @@ html {
 body {
   margin: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Segoe UI", sans-serif;
-  background: radial-gradient(1000px 620px at 14% -10%, rgba(33,180,168,.18), transparent 60%),
-              radial-gradient(900px 500px at 94% 4%, rgba(242,154,74,.14), transparent 60%),
-              radial-gradient(700px 420px at 50% 100%, rgba(37,99,235,.12), transparent 60%),
+  background: radial-gradient(1000px 620px at 14% -10%, rgba(191,128,255,.15), transparent 60%),
+              radial-gradient(900px 500px at 94% 4%, rgba(167,139,250,.12), transparent 60%),
+              radial-gradient(700px 420px at 50% 100%, rgba(168,85,247,.10), transparent 60%),
               var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -289,13 +289,13 @@ body.experience-active .floating-hs {
   padding: 8px 10px;
   border-radius: 999px;
   color: var(--muted);
-  background: linear-gradient(120deg, rgba(33,180,168,.13), rgba(255,255,255,.03));
+  background: linear-gradient(120deg, rgba(191,128,255,.13), rgba(255,255,255,.03));
   transition: all 0.3s ease;
 }
 
 .chip:hover {
-  background: linear-gradient(120deg, rgba(33,180,168,.22), rgba(33,180,168,.07));
-  border-color: rgba(33,180,168,.45);
+  background: linear-gradient(120deg, rgba(191,128,255,.22), rgba(191,128,255,.07));
+  border-color: rgba(191,128,255,.45);
   transform: translateY(-2px);
 }
 
@@ -311,7 +311,7 @@ body.experience-active .floating-hs {
 }
 
 .card:hover {
-  border-color: rgba(33,180,168,.35);
+  border-color: rgba(191,128,255,.35);
 }
 
 @media (hover: hover) {
@@ -328,7 +328,7 @@ body.experience-active .floating-hs {
   gap: 10px;
   padding: 10px 14px;
   border-radius: 999px;
-  background: linear-gradient(120deg, var(--accent), #0e8e87);
+  background: linear-gradient(120deg, var(--accent), #8B5CF6);
   border: 1px solid rgba(255,255,255,.15);
   color: white;
   font-weight: 700;
@@ -358,7 +358,7 @@ body.experience-active .floating-hs {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(33,180,168,.32);
+  box-shadow: 0 10px 30px rgba(191,128,255,.32);
 }
 
 .btn.ghost{
@@ -368,8 +368,8 @@ body.experience-active .floating-hs {
 }
 
 .btn.ghost:hover {
-  background: rgba(33,180,168,.10);
-  border-color: rgba(33,180,168,.45);
+  background: rgba(191,128,255,.10);
+  border-color: rgba(191,128,255,.45);
   color: var(--accent);
 }
 
@@ -579,8 +579,8 @@ p, h1, h2, h3, .muted, a, span {
 
 .project-card:hover{
   transform: translateY(-4px);
-  border-color: rgba(33,180,168,.62);
-  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.35), 0 0 0 1px rgba(33,180,168,.28) inset;
+  border-color: rgba(191,128,255,.62);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.35), 0 0 0 1px rgba(191,128,255,.28) inset;
 }
 
 /* Project thumbnail visual and parallax support */
@@ -1185,8 +1185,8 @@ p, h1, h2, h3, .muted, a, span {
 
 .contact-item:hover {
   transform: translateX(8px);
-  border-color: rgba(33,180,168,.45);
-  background: rgba(33,180,168,.08);
+  border-color: rgba(191,128,255,.45);
+  background: rgba(191,128,255,.08);
 }
 
 .contact-label{ color: var(--muted); font-weight: 900; }
@@ -1338,7 +1338,7 @@ p, h1, h2, h3, .muted, a, span {
   position: fixed;
   width: 20px;
   height: 20px;
-  border: 2px solid rgba(33,180,168,.9);
+  border: 2px solid rgba(191,128,255,.9);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -1349,7 +1349,7 @@ p, h1, h2, h3, .muted, a, span {
 .cursor-glow.hovering {
   width: 50px;
   height: 50px;
-  background: rgba(33,180,168,.12);
+  background: rgba(191,128,255,.12);
 }
 
 /* Decrypt tooltip */

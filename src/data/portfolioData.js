@@ -1,12 +1,10 @@
 export const assetUrl = (relativePath) => `${import.meta.env.BASE_URL}${relativePath}`;
 
-export const HERO_BG_IMAGE = assetUrl("img/HS.png");
-export const HERO_BG_IMAGE_OPPOSITE = assetUrl("img/ana.png");
-export const AVATAR_IMAGE = assetUrl("img/houssams Salek.png");
-
 export const PROFILE = {
   name: "Houssam Salek",
-  title: "Computer Science Student | Backend & Full-Stack Developer",
+  title: "Backend & Full-Stack Developer",
+  subtitle: "Building secure, scalable, and useful web applications",
+  bio: "Computer Science student at EMSI passionate about backend engineering and full-stack development. I build clean, maintainable systems that solve real problems — from secure APIs to responsive web apps.",
   location: "Tanger-Tetouan-Al Hoceima, Morocco",
   email: "houssam.salek@edu-emsi.ma",
   github: "https://github.com/SHoussam",
@@ -18,124 +16,114 @@ export const PROFILE = {
   }
 };
 
-export const EXPERIENCE = [
-  {
-    date: "July 2026",
-    title: "Backend / Full-Stack Internship Objective",
-    details:
-      "Actively seeking a PFA internship in backend, full-stack, or software engineering to contribute to real-world projects and strengthen production skills."
-  },
-  {
-    date: "2023 - Present",
-    title: "EMSI — Ingénierie Informatique & Réseaux",
-    details:
-      "Coursework in software engineering, web development, systems programming, and applied academic projects."
-  }
+export const HERO_BADGES = [
+  "PHP", "Laravel", "MySQL", "React", "JavaScript", "Linux"
 ];
 
-export const CERTIFICATES = [
+export const SKILL_GROUPS = [
   {
-    title: "Certificate in C++ Programming",
-    issuer: "Online Course",
-    year: "2025",
-    image: assetUrl("img/cc++.png"),
-    pdf: assetUrl("pdf/Coursera C++-POO.pdf"),
-    qr: assetUrl("img/frame (2).png")
+    title: "Backend",
+    icon: "Server",
+    description: "Server-side logic, APIs, and secure data operations.",
+    items: [
+      { name: "PHP" },
+      { name: "Laravel" },
+      { name: "Node.js" },
+      { name: "Bash" },
+      { name: "Python" },
+    ]
   },
   {
-    title: "Web Development (HTML/CSS/JS)",
-    issuer: "Online Course",
-    year: "2025",
-    image: assetUrl("img/js.png"),
-    pdf: assetUrl("pdf/Coursera js.pdf"),
-    qr: assetUrl("img/frame.png")
+    title: "Frontend",
+    icon: "Monitor",
+    description: "Building responsive, accessible, and modern interfaces.",
+    items: [
+      { name: "React" },
+      { name: "JavaScript" },
+      { name: "TypeScript" },
+      { name: "HTML/CSS" },
+      { name: "Tailwind CSS" },
+    ]
   },
   {
-    title: "Linux Fundamentals",
-    issuer: "Online Course",
-    year: "2025",
-    image: assetUrl("img/unix.png"),
-    pdf: assetUrl("pdf/Coursera unix.pdf"),
-    qr: assetUrl("img/frame (1).png")
+    title: "Databases",
+    icon: "Database",
+    description: "Data modeling, queries, and secure persistence.",
+    items: [
+      { name: "MySQL" },
+      { name: "PDO" },
+      { name: "SQL" },
+    ]
+  },
+  {
+    title: "Tools",
+    icon: "Wrench",
+    description: "Daily environment for shipping and collaboration.",
+    items: [
+      { name: "Git & GitHub" },
+      { name: "Linux" },
+      { name: "Docker" },
+      { name: "Vite" },
+      { name: "VS Code" },
+    ]
   }
 ];
 
 export const PROJECTS = [
   {
-    title: "SysAuditKit — Linux Audit Toolkit",
-    description:
-      "Modular Bash toolkit packaged as a Debian .deb for quick Linux system audits and reporting.",
-    technologies: ["Bash", "Linux", "Debian", "System Administration"],
-    features: [
-      "Audit modules for system info, processes, users, and permissions",
-      "Debian package for easy installation and updates",
-      "Generates concise reports for fast reviews"
-    ],
+    title: "Aim Trainer — Browser Shooting Game",
+description:
+  "Interactive browser-based aim training game designed to test reaction speed, precision, and hand-eye coordination with dynamic targets and score tracking.",
+technologies: ["HTML", "CSS", "JavaScript", "Game Logic"],
     github: "https://github.com/dororo911/Aim.git",
     live: "https://houssamsalek.me/Aim/",
     image: assetUrl("img/aime.png"),
-    speed: 0.4
+    featured: true,
   },
   {
     title: "Lahek Library — Web App",
     description:
-      "PHP/MySQL library management app with authentication, role-based access, and secure CRUD via PDO.",
-    technologies: ["PHP", "MySQL", "PDO", "HTML", "CSS","JavaScript","LARAVEL"],
-    features: [
-      "Admin dashboard for catalog and wishlist management",
-      "Role-based access control and session handling",
-      "Prepared statements for secure data operations"
-    ],
+      "PHP/MySQL library management app with authentication, role-based access control, and secure CRUD via PDO.",
+    technologies: ["PHP", "MySQL", "PDO", "Laravel", "JavaScript"],
     github: "https://github.com/dororo911/LahekLibrary.git",
     live: null,
     image: assetUrl("img/php.png"),
-    speed: 0.3
+    featured: true,
   },
   {
     title: "Media Library CLI (C++)",
     description:
-      "C++ console application demonstrating OOP, multi-role auth, and file-backed persistence for a media library.",
+      "C++ console application with OOP, multi-role authentication, and file-backed persistence for a media library.",
     technologies: ["C++", "OOP", "STL", "File I/O"],
-    features: [
-      "Multi-role authentication and subscription rules",
-      "Borrowing and return logic with persistence",
-      "Uses STL and file I/O for data storage"
-    ],
     github: "https://github.com/dororo911/Media-Library-CLI-C-.git",
     live: null,
     image: assetUrl("img/c++.png"),
-    speed: 0.2
+    featured: true,
   }
 ];
 
-export const SKILL_GROUPS = [
+export const EXPERIENCE = [
   {
-    title: "Backend & Databases",
-    description: "Server-side logic, data modeling, and secure CRUD.",
-    items: ["PHP", "MySQL", "PDO", "Bash", "Linux"]
+    date: "July 2026",
+    title: "Backend / Full-Stack Internship Objective",
+    description:
+      "Actively seeking a PFA internship in backend, full-stack, or software engineering to contribute to real-world projects and strengthen production skills.",
+    type: "goal",
   },
   {
-    title: "Frontend",
-    description: "Building responsive, accessible interfaces.",
-    items: ["React", "JavaScript", "TypeScript", "HTML", "CSS"]
-  },
-  {
-    title: "Languages",
-    description: "Core programming languages used across projects.",
-    items: ["C", "C++", "Java", "Python"]
-  },
-  {
-    title: "Tools & Workflow",
-    description: "Daily environment for shipping and collaboration.",
-    items: ["Git", "GitHub", "Linux", "Vite", "VS Code"]
+    date: "2023 — Present",
+    title: "EMSI — Ingénierie Informatique & Réseaux",
+    description:
+      "Coursework in software engineering, web development, systems programming, and applied academic projects.",
+    type: "education",
   }
 ];
 
 export const NAV_ITEMS = [
   { id: "about", label: "About" },
-  { id: "experience", label: "Experience & Education" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "certificates", label: "Certificates" },
+  { id: "experience", label: "Experience" },
+  { id: "looking-for", label: "Looking For" },
   { id: "contact", label: "Contact" }
 ];

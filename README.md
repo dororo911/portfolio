@@ -37,3 +37,16 @@ portfolio/
 │── index.html
 │── package.json
 │── vite.config.js
+
+
+## Component Layout
+
+- Hero and header live in `src/components/hero/` with the canvas background in `HeroBackground.tsx`.
+- Page sections are grouped by feature under `src/components/sections/` (about, experience, skills, projects, certificates, contact).
+- Shared styles remain in `src/styles/` with hero-specific styles in `heroHeader.css`.
+
+## Getting Started
+
+1. Install dependencies: `npm install`
+2. Run the dev server: `npm run dev`
+3. Build for production: `npm run build`
