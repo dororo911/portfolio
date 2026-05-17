@@ -26,11 +26,11 @@ export const SKILL_GROUPS = [
     icon: "Server",
     description: "Server-side logic, APIs, and secure data operations.",
     items: [
-      { name: "PHP" },
-      { name: "Laravel" },
-      { name: "Node.js" },
-      { name: "Bash" },
-      { name: "Python" },
+      { name: "PHP", logo: "https://cdn.simpleicons.org/php/white" },
+      { name: "Laravel", logo: "https://cdn.simpleicons.org/laravel/white" },
+      { name: "Node.js", logo: "https://cdn.simpleicons.org/nodedotjs/white" },
+      { name: "Bash", logo: "https://cdn.simpleicons.org/gnubash/white" },
+      { name: "Python", logo: "https://cdn.simpleicons.org/python/white" },
     ]
   },
   {
@@ -38,11 +38,12 @@ export const SKILL_GROUPS = [
     icon: "Monitor",
     description: "Building responsive, accessible, and modern interfaces.",
     items: [
-      { name: "React" },
-      { name: "JavaScript" },
-      { name: "TypeScript" },
-      { name: "HTML/CSS" },
-      { name: "Tailwind CSS" },
+      { name: "React", logo: "https://cdn.simpleicons.org/react/white" },
+      { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript/white" },
+      { name: "TypeScript", logo: "https://cdn.simpleicons.org/typescript/white" },
+      { name: "HTML5", logo: "https://cdn.simpleicons.org/html5/white" },
+      { name: "CSS", logo: "https://cdn.simpleicons.org/css/white" },
+      { name: "Tailwind CSS", logo: "https://cdn.simpleicons.org/tailwindcss/white" },
     ]
   },
   {
@@ -50,9 +51,20 @@ export const SKILL_GROUPS = [
     icon: "Database",
     description: "Data modeling, queries, and secure persistence.",
     items: [
-      { name: "MySQL" },
-      { name: "PDO" },
-      { name: "SQL" },
+      { name: "MySQL", logo: "https://cdn.simpleicons.org/mysql/white" },
+      { name: "PostgreSQL", logo: "https://cdn.simpleicons.org/postgresql/white" },
+      { name: "MongoDB", logo: "https://cdn.simpleicons.org/mongodb/white" },
+    ]
+  },
+  {
+    title: "APIs & Integration",
+    icon: "Server",
+    description: "Designing, building, and testing standard RESTful APIs.",
+    items: [
+      { name: "REST API", logo: "https://cdn.simpleicons.org/fastapi/white" },
+      { name: "Postman", logo: "https://cdn.simpleicons.org/postman/white" },
+      { name: "Swagger", logo: "https://cdn.simpleicons.org/swagger/white" },
+      { name: "GraphQL", logo: "https://cdn.simpleicons.org/graphql/white" },
     ]
   },
   {
@@ -60,11 +72,12 @@ export const SKILL_GROUPS = [
     icon: "Wrench",
     description: "Daily environment for shipping and collaboration.",
     items: [
-      { name: "Git & GitHub" },
-      { name: "Linux" },
-      { name: "Docker" },
-      { name: "Vite" },
-      { name: "VS Code" },
+      { name: "Git", logo: "https://cdn.simpleicons.org/git/white" },
+      { name: "GitHub", logo: "https://cdn.simpleicons.org/github/white" },
+      { name: "Linux", logo: "https://cdn.simpleicons.org/linux/white" },
+      { name: "Docker", logo: "https://cdn.simpleicons.org/docker/white" },
+      { name: "Vite", logo: "https://cdn.simpleicons.org/vite/white" },
+      
     ]
   }
 ];
