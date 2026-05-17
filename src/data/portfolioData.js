@@ -22,28 +22,26 @@ export const HERO_BADGES = [
 
 export const SKILL_GROUPS = [
   {
-    title: "Backend",
-    icon: "Server",
-    description: "Server-side logic, APIs, and secure data operations.",
-    items: [
-      { name: "PHP", logo: "https://cdn.simpleicons.org/php/white" },
-      { name: "Laravel", logo: "https://cdn.simpleicons.org/laravel/white" },
-      { name: "Node.js", logo: "https://cdn.simpleicons.org/nodedotjs/white" },
-      { name: "Bash", logo: "https://cdn.simpleicons.org/gnubash/white" },
-      { name: "Python", logo: "https://cdn.simpleicons.org/python/white" },
-    ]
-  },
-  {
     title: "Frontend",
     icon: "Monitor",
     description: "Building responsive, accessible, and modern interfaces.",
     items: [
-      { name: "React", logo: "https://cdn.simpleicons.org/react/white" },
-      { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript/white" },
-      { name: "TypeScript", logo: "https://cdn.simpleicons.org/typescript/white" },
-      { name: "HTML5", logo: "https://cdn.simpleicons.org/html5/white" },
-      { name: "CSS", logo: "https://cdn.simpleicons.org/css/white" },
-      { name: "Tailwind CSS", logo: "https://cdn.simpleicons.org/tailwindcss/white" },
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+    ]
+  },
+  {
+    title: "Backend",
+    icon: "Server",
+    description: "Server-side logic, APIs, and secure data operations.",
+    items: [
+      { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+      { name: "Laravel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" },
+      { name: "FastAPI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+      { name: "REST API", logo: "https://cdn.simpleicons.org/fastapi" },
     ]
   },
   {
@@ -51,33 +49,42 @@ export const SKILL_GROUPS = [
     icon: "Database",
     description: "Data modeling, queries, and secure persistence.",
     items: [
-      { name: "MySQL", logo: "https://cdn.simpleicons.org/mysql/white" },
-      { name: "PostgreSQL", logo: "https://cdn.simpleicons.org/postgresql/white" },
-      { name: "MongoDB", logo: "https://cdn.simpleicons.org/mongodb/white" },
+      { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
     ]
   },
   {
-    title: "APIs & Integration",
-    icon: "Server",
-    description: "Designing, building, and testing standard RESTful APIs.",
+    title: "Languages",
+    icon: "Code",
+    description: "Programming languages used in projects and studies.",
     items: [
-      { name: "REST API", logo: "https://cdn.simpleicons.org/fastapi/white" },
-      { name: "Postman", logo: "https://cdn.simpleicons.org/postman/white" },
-      { name: "Swagger", logo: "https://cdn.simpleicons.org/swagger/white" },
-      { name: "GraphQL", logo: "https://cdn.simpleicons.org/graphql/white" },
+      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+      { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+      { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+      { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
     ]
   },
   {
-    title: "Tools",
-    icon: "Wrench",
-    description: "Daily environment for shipping and collaboration.",
+    title: "Systems & Automation",
+    icon: "Terminal",
+    description: "Environment and scripting for development and deployment.",
     items: [
-      { name: "Git", logo: "https://cdn.simpleicons.org/git/white" },
-      { name: "GitHub", logo: "https://cdn.simpleicons.org/github/white" },
-      { name: "Linux", logo: "https://cdn.simpleicons.org/linux/white" },
-      { name: "Docker", logo: "https://cdn.simpleicons.org/docker/white" },
-      { name: "Vite", logo: "https://cdn.simpleicons.org/vite/white" },
-      
+      { name: "Linux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+      { name: "Bash", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
+    ]
+  },
+  {
+    title: "Soft Skills",
+    icon: "Users",
+    description: "Interpersonal and problem-solving strengths.",
+    items: [
+      { name: "Teamwork" },
+      { name: "Problem Solving" },
+      { name: "Communication" },
+      { name: "Adaptability" },
+      { name: "Critical Thinking" },
+      { name: "Stress Management" },
     ]
   }
 ];

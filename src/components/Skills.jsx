@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { Server, Monitor, Database, Wrench } from 'lucide-react';
+import { Server, Monitor, Database, Code, Terminal, Users } from 'lucide-react';
 import SectionHeading from './SectionHeading';
 import SectionContainer from './layout/SectionContainer';
 import LogoLoop from './LogoLoop';
 import { SKILL_GROUPS } from '../data/portfolioData';
 
-const iconMap = { Server, Monitor, Database, Wrench };
+const iconMap = { Server, Monitor, Database, Code, Terminal, Users };
 
 const containerVariants = {
   hidden: {},
