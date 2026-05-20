@@ -91,25 +91,56 @@ export const SKILL_GROUPS = [
 
 export const PROJECTS = [
   {
-    title: "Aim Trainer — Browser Shooting Game",
-description:
-  "Interactive browser-based aim training game designed to test reaction speed, precision, and hand-eye coordination with dynamic targets and score tracking.",
-technologies: ["HTML", "CSS", "JavaScript", "Game Logic"],
-    github: "https://github.com/dororo911/Aim.git",
-    live: "https://houssamsalek.me/Aim/",
-    image: assetUrl("img/aime.png"),
-    featured: true,
-  },
-  {
-    title: "Lahek Library — Web App",
-    description:
-      "PHP/MySQL library management app with authentication, role-based access control, and secure CRUD via PDO.",
-    technologies: ["PHP", "MySQL", "PDO", "Laravel", "JavaScript"],
-    github: "https://github.com/dororo911/LahekLibrary.git",
-    live: null,
-    image: assetUrl("img/php.png"),
-    featured: true,
-  },
+  title: "StageLink — Multi-School Internship Platform",
+  description:
+    "Secure internship management platform connecting students, schools, and companies. Features student verification, internship applications, document management, authentication, dashboards, and role-based access control.",
+  technologies: [
+    "Laravel",
+    "PHP",
+    "MySQL",
+    "FastAPI",
+    "SQLModel",
+    "Authentication",
+    "REST API"
+  ],
+  github: null,
+  live: null,
+  image: assetUrl("img/aime.png"),
+  featured: true,
+},
+  
+ {
+  title: "DeskLight — Smart Productivity Platform",
+
+  description:
+    "Full-stack productivity platform designed for task management, study tracking, scheduling, expense monitoring, journaling, mood tracking, and personalized dashboards with secure authentication and real-time data management.",
+
+  technologies: [
+    "FastAPI",
+    "Python",
+    "SQLModel",
+    "MySQL",
+    "JavaScript",
+    "REST API",
+    "Authentication"
+  ],
+
+  highlights: [
+    "Secure user authentication",
+    "Task and productivity management",
+    "Study module tracking",
+    "Schedule and calendar system",
+    "Expense management",
+    "Mood and journal tracking",
+    "Custom user dashboard",
+    "RESTful API architecture"
+  ],
+
+  github: "https://github.com/Shoussam/desklight",
+  live: null,
+  image: assetUrl("img/ggg.png"),
+  featured: true,
+},
   {
     title: "Media Library CLI (C++)",
     description:
