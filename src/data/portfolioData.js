@@ -105,7 +105,7 @@ export const PROJECTS = [
   ],
   github: null,
   live: null,
-  image: assetUrl("img/aime.png"),
+  image: assetUrl("img/e.png"),
   featured: true,
 },
   
